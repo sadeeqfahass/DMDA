@@ -1,80 +1,171 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: url(bg.jpg);
-  background-size: cover;
-}
-
-.text-con {
-  text-align: center;
-  transition: all 2s;
-  position: relative;
-  z-index: 10;
+body {
   font-family: "Montserrat", sans-serif;
 }
 
-.text-con h1 {
+.hero {
+  background: url(bg.jpg);
+  background-size: cover;
+  padding: 15rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
   font-size: 5rem;
-  text-shadow: 3px 5px 8px #000;
+  letter-spacing: 0.7rem;
+  margin-bottom: 0.5rem;
+  color: #555555;
   text-transform: uppercase;
-  animation: animate 4s linear alternate-reverse infinite;
+  font-family: cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.text-con h3 {
-  font-size: 2.8rem;
-  font-weight: 400;
-  color: #000;
-  text-shadow: 3px 5px 8px #000;
-  animation: animate2 10s linear forwards infinite;
+.hero h3 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 4px 4px 2px #000;
 }
 
-.soybean {
-  height: 30rem;
-  width: 30rem;
-  border-radius: 50%;
-  border: 2px #009245 solid;
-  position: absolute;
-  top: 10%;
-  right: 85%;
+.services {
+  padding: 3rem 2rem 9rem;
 }
 
-.soybean1 {
-  height: 20rem;
-  width: 20rem;
-  border-radius: 50%;
-  border: 2px #009245 solid;
-  position: absolute;
-  top: -20%;
-  left: 90%;
+.card-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes animate {
-  from {
-    transform: translateX(-200px);
-    color: #009245;
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.card {
+  background: #fff;
+  width: 25%;
+  padding: 4rem 2rem;
+  margin-right: 1.5rem;
+  text-align: center;
+  transition: all 0.6s;
+  border-radius: 0.2rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.card-title {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.card-desc {
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.history {
+  padding: 3rem 2rem 5rem;
+  background: #000;
+  color: #fff;
+}
+
+.text-con {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+
+.text-con p:first-child {
+  margin-right: 2rem;
+}
+
+.text-con p:first-child::first-letter {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+.history hr {
+  margin-top: 3rem;
+}
+
+.history .social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.history .social-icons i {
+  margin-right: 1rem;
+  color: #fff;
+}
+
+.history .social-icons i:last-child {
+  margin-right: 0;
+}
+
+
+@media (max-width: 560px) {
+
+  .hero h1 {
+    font-size: 3.5rem;
   }
 
-  to {
-    transform: scale(1.2);
-    color: #777;
-    letter-spacing: 1.2rem;
+  .services {
+    padding: 1rem .5rem;
   }
+
+  .card {
+    width: 80%;
+    margin: 0 0 2rem;
+  }
+
+  .text-con {
+    flex-direction: column;
+  }
+
+  .text-con p {
+    margin-bottom: 2rem;
+  }
+
+  .text-con p:first-child {
+    margin-right: 0;
+  }
+
 }
 
-@keyframes animate2 {
-  from {
-    transform: translateX(-130%);
-  }
+@media (max-width: 790px) {
 
-  to {
-    transform: translateX(130%);
+  .card {
+    width: 80%;
+    margin: 0 0 2rem;
   }
+  
 }

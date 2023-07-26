@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import Soon from './components/Soon'
+import Hero from './components/Hero'
+import History from './components/History'
+import Services from './components/Services'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Soon />
+    <Hero />
+    <Services />
+    <History />
     </>
   )
 }
